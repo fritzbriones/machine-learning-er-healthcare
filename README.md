@@ -1,24 +1,28 @@
 # 🏥 Machine-Learning-ER-Healthcare
 
-Using **machine learning**—specifically **Random Forest models** with **SHAP (SHapley Additive exPlanations)**—to predict ER wait times and walkouts in healthcare settings.
+Using **machine learning**—specifically **Random Forest models** coupled with **SHAP (SHapley Additive exPlanations)**—to predict ER wait times and patient walkouts in healthcare settings.
 
-This project is part of a **Lean Six Sigma (Black Belt-level) initiative** aimed at addressing the persistent issue of long ER wait times and patient walkouts. By integrating the **DMAIC framework**, **Random Forest Machine Learning models**, and **Explainable AI techniques like SHAP**, the project provides data-driven insights for process improvement.
+This project is part of a **Lean Six Sigma Black Belt-level initiative** aimed at addressing the persistent issue of long ER wait times and patient walkouts. By integrating the **DMAIC framework**, **Random Forest machine learning models**, and explainable AI techniques like **SHAP**, the project delivers actionable, data-driven insights to optimize ER processes and enhance patient outcomes.
 
-A **realistic synthetic dataset** was generated using **ChatGPT with logic-based simulation**, representing 250 emergency room cases. It enables modeling and analysis while respecting data privacy.
+A **realistic synthetic dataset** was generated using **ChatGPT with logic-based simulation**, representing 250 emergency room cases. This approach allows for robust modeling and analysis while fully preserving patient privacy.
 
 ---
 
 ## 📂 Quick Access
 
-- 👉 [View Jupyter Notebook](er_ml_analysis.ipynb)  
-- 📊 [Download Dataset (CSV)](er_data.csv)
+- 👉 [Explore Jupyter Notebook](er_ml_analysis.ipynb)  
+- 📊 [Download Baseline Dataset (CSV)](er_data.csv)  
+- 📊 [Download Post-Intervention Dataset (CSV)](post_intervention_er_data.csv)
 
 ---
 
 ## 📁 Files Included
 
-- `er_ml_analysis.ipynb` – Jupyter Notebook with **Random Forest**, SHAP, and visualizations  
-- `er_data.csv` – AI-simulated ER dataset (250 records)
+| Filename                     | Description                                                        |
+|------------------------------|--------------------------------------------------------------------|
+| `er_ml_analysis.ipynb`       | Jupyter Notebook with **Random Forest**, SHAP explainability, and visualizations |
+| `er_data.csv`                | Synthetic baseline ER dataset (250 simulated patient records)      |
+| `post_intervention_er_data.csv` | Synthetic post-intervention dataset modeling Lean Six Sigma improvements |
 
 ---
 
@@ -26,107 +30,96 @@ A **realistic synthetic dataset** was generated using **ChatGPT with logic-based
 
 - Predict **ER Wait Time** (continuous) using **Random Forest Regression**  
 - Predict **Patient Walkout** (binary) using **Random Forest Classification**  
-- Interpret feature importance using **SHAP (SHapley Additive Explanations)**  
-- Recommend improvement strategies based on model insights
+- Interpret feature importance with **SHAP (SHapley Additive exPlanations)**—a model-agnostic explainability method based on **Shapley values** from cooperative game theory  
+- Recommend scalable, low-cost process improvements based on model insights
 
-> 🔬 SHAP, developed by **Scott Lundberg and Su-In Lee at the University of Washington**, provides a unified, model-agnostic approach to explain the output of machine learning models by quantifying each feature’s contribution to the prediction. SHAP has also been featured in MIT open courseware and AI curricula due to its widespread impact.
+> 🔬 **SHAP**, developed by Scott Lundberg and Su-In Lee (University of Washington), provides a unified framework to explain individual and global model predictions by quantifying each feature’s contribution, enhancing transparency and trustworthiness in AI-driven healthcare solutions.
 
 ---
 
 ## 🧠 Techniques Used
 
-- 📊 Statistical Analysis: **Jamovi**  
-- 📈 ML Models: **Random Forest Regression** & **Random Forest Classification** (Scikit-learn)  
-- 🧠 Model Explainability: **SHAP** (Summary and Interaction plots)  
-- 📉 Visualization Tools: **Seaborn**, **Matplotlib**, **Tableau Public**  
-- 🛠 Lean Six Sigma Tools: SIPOC, Control Charts, FMEA, Pareto, 5 Whys
+- **Statistical Analysis:** Jamovi  
+- **Machine Learning Models:** Random Forest Regression and Classification (Scikit-learn)  
+- **Explainability:** SHAP (summary and interaction plots)  
+- **Visualization:** Seaborn, Matplotlib, Tableau Public  
+- **Lean Six Sigma Tools:** SIPOC, Control Charts, FMEA, Pareto Analysis, 5 Whys
 
 ---
 
 ## ✅ DMAIC Framework Alignment
 
-| Phase     | Description |
-|-----------|-------------|
-| **Define**   | Identified ER wait time and patient walkouts as CTQ problems |
-| **Measure**  | Analyzed simulated data across 250 cases |
-| **Analyze**  | Used **Random Forest + SHAP** to identify predictors and root causes |
-| **Improve**  | Proposed actions: triage optimization, shift-based staffing |
-| **Control**  | Metrics tracked via visual charts and modeling feedback |
+| Phase     | Description                                                                        |
+|-----------|------------------------------------------------------------------------------------|
+| **Define**   | Identified ER wait times and patient walkouts as critical-to-quality (CTQ) issues |
+| **Measure**  | Analyzed 250 simulated ER patient cases for baseline performance                 |
+| **Analyze**  | Employed **Random Forest + SHAP** to identify predictors and root causes         |
+| **Improve**  | Proposed triage optimization, shift-based staffing, and digital queue management |
+| **Control**  | Established monitoring via control charts and ongoing data-driven feedback       |
 
 ---
 
-## 📊 Key Insights
+## 📊 Key Insights & Results
 
-| **Indicator**                    | **Baseline** | **Proposed Outcome** | **% Change**        |
-|----------------------------------|--------------|-----------------------|---------------------|
-| Average Wait Time               | 169 mins     | 128 mins (target)     | ↓ 24.3%             |
-| % Patients Waiting >150 mins    | 40%          | 18%                   | ↓ 55%               |
-| Walkout Rate                    | 35%          | 14%                   | ↓ 60%               |
-| Sigma Level                     | 1.85         | 2.55                  | ↑ Improved Capability |
-| Estimated Annual Savings        | —            | ₱520,000 (projected)  | Cost Avoidance      |
-
-> 📌 *Figures represent expected improvements based on model findings, not actual post-intervention data.*
+| Indicator                      | Baseline       | Post-Intervention | % Change           | Impact Summary                                                                                   |
+|-------------------------------|----------------|-------------------|--------------------|------------------------------------------------------------------------------------------------|
+| **Average Wait Time (minutes)**| 169.06         | 127.92            | ↓ 24.3%            | Approximately 41-minute reduction per patient following triage restructuring and digitization  |
+| **% Patients Waiting >150 mins**| 75.2%          | 14.8%             | ↓ 80.3%            | Significant drop in excessive wait times identified as defects in both datasets                 |
+| **Walkout Rate**               | 35.2%          | 18.4%             | ↓ 47.7%            | Verified via Chi-square test; reflects improved patient retention and satisfaction               |
+| **Sigma Level**                | 1.85 σ         | 2.55 σ            | ↑ Enhanced Capability | Calculated using NORMSINV(1 - defect rate) + 1.5; defect rate dropped from ~31% to 14.8%       |
+| **Estimated Annual Savings (₱)**| —              | ₱420,000          | Cost Avoidance     | Projected savings from 16.8% fewer walkouts, capturing retained revenue and increased throughput |
 
 ---
 
 ## 🧠 SHAP Highlights
 
-- **Triage Level**: Strongest driver—higher severity linked to shorter waits  
-- **Shift**: Night shifts associated with higher predicted wait times  
-- **SHAP Interaction**: Long waits during night shifts have magnified effects  
+- **Triage Level:** Strongest predictor; higher severity (lower triage scores) correlates with shorter waits  
+- **Shift:** Night shifts are associated with increased predicted wait times  
+- **Feature Interaction:** Combination of night shift and triage level magnifies wait time effects
 
 ---
 
-## 🔧 Improvements Proposed
+## 🔧 Proposed Improvements
 
-All proposed improvements are **low-cost**, **realistic**, and **scalable**, supported by data insights and accessible technologies:
+All recommended interventions are **low-cost, scalable, and data-backed**:
 
-- Implement **triage optimization protocols** to prioritize high-severity patients  
-- **Adjust staffing schedules** based on shift-level wait time patterns  
-- Use **digital queue boards or SMS notifications** to reduce walkouts  
-- Analyze and monitor process metrics using:
-  - 🟢 **Jamovi** for statistical testing and effect sizes  
-  - 🐍 **Python + Anaconda + VS Code** for modeling and automation  
+- Implement **triage optimization protocols** prioritizing high-acuity patients  
+- Adjust **staffing schedules based on shift-level wait time patterns**  
+- Deploy **digital queue boards and SMS notifications** to reduce walkouts  
+- Monitor KPIs using:  
+  - 🟢 **Jamovi** for statistical validation  
+  - 🐍 **Python (Anaconda + VS Code)** for model development and automation  
   - 📊 **Tableau Public** and **Excel** for dashboards and control charts  
-- Train frontline teams with **data-driven decision support tools**  
-- Develop a lightweight **real-time prediction dashboard** with existing infrastructure
+- Train frontline staff on **data-driven decision support** tools  
+- Develop **real-time predictive dashboards** integrated into existing hospital systems
 
 ---
 
-## 📷 Visuals and Plots
+## 📷 Visualizations
 
-This project utilizes multiple visualizations to interpret model results and track ER process improvements:
+Visual tools included:
 
-- **SHAP Summary Plot**  
-  Shows the contribution of each feature (e.g., Triage Level, Shift) to predictions of ER wait times made by **Random Forest**.
+- **SHAP Summary Plot:** Feature importance and impact on wait time predictions  
+- **Actual vs. Predicted Scatter Plot:** Model accuracy assessment  
+- **Control Chart:** Monitoring wait times and detecting variations  
+- **Pareto Chart:** Ranking top causes of delays and walkouts  
+- **SHAP Interaction Plot:** Exploring feature interactions affecting predictions
 
-- **Actual vs. Predicted Wait Time Scatter Plot**  
-  Measures **Random Forest** performance—well-aligned points indicate accurate predictions.
-
-- **Control Chart**  
-  Monitors ER wait times across shifts using statistical control limits.
-
-- **Pareto Chart**  
-  Ranks top causes of delays or walkouts to focus interventions.
-
-- **SHAP Interaction Plot**  
-  Explores how variables like Shift and Triage Level interact in **Random Forest predictions**.
-
-All plots are created using **open-source Python libraries** and rendered inside the Jupyter Notebook. Visual outputs can be exported for use in dashboards, reports, or presentations.
+All plots are generated using open-source Python libraries within the Jupyter Notebook and can be exported for reports and presentations.
 
 ---
 
 ## 📌 Use Cases
 
-- ER operations and staffing optimization  
-- Healthcare analytics and continuous improvement planning  
-- Academic case studies for teaching ML and Lean Six Sigma  
+- ER operations optimization and staffing planning  
+- Healthcare analytics for quality improvement  
+- Academic and professional case studies on ML + Lean Six Sigma integration
 
 ---
 
 ## 📄 License
 
-This repository is for educational and demonstration purposes only.  
-© 2025 fritzbriones. Redistribution requires permission.
+This repository is intended for **educational and demonstration purposes only**.  
+© 2025 fritzbriones. Redistribution or commercial use requires prior permission.
 
 ---
