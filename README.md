@@ -8,6 +8,17 @@ A **realistic synthetic dataset** was generated using **ChatGPT with logic-based
 
 ---
 
+## 📊 Data Generation & Simulation
+
+Both the **baseline** and **post-intervention datasets** are synthetically generated through ChatGPT-powered logic-based simulation:
+
+- The **baseline dataset** models typical ER patient flows, wait times, and walkouts prior to any interventions.  
+- The **post-intervention dataset** is simulated by applying modeled Lean Six Sigma interventions—such as triage optimization, shift-based staffing adjustments, and digital queue management—to the baseline data, reflecting expected operational improvements.
+
+This method ensures realistic, privacy-compliant data for predictive modeling and comparative evaluation of process improvements.
+
+---
+
 ## 📂 Quick Access
 
 - 👉 [Explore Jupyter Notebook](er_ml_analysis.ipynb)  
@@ -61,13 +72,13 @@ A **realistic synthetic dataset** was generated using **ChatGPT with logic-based
 
 ## 📊 Key Insights & Results
 
-| Indicator                      | Baseline       | Post-Intervention | % Change           | Impact Summary                                                                                   |
-|-------------------------------|----------------|-------------------|--------------------|------------------------------------------------------------------------------------------------|
-| **Average Wait Time (minutes)**| 169.06         | 127.92            | ↓ 24.3%            | Approximately 41-minute reduction per patient following triage restructuring and digitization  |
-| **% Patients Waiting >150 mins**| 75.2%          | 14.8%             | ↓ 80.3%            | Significant drop in excessive wait times identified as defects in both datasets                 |
-| **Walkout Rate**               | 35.2%          | 18.4%             | ↓ 47.7%            | Verified via Chi-square test; reflects improved patient retention and satisfaction               |
-| **Sigma Level**                | 1.85 σ         | 2.55 σ            | ↑ Enhanced Capability | Calculated using NORMSINV(1 - defect rate) + 1.5; defect rate dropped from ~31% to 14.8%       |
-| **Estimated Annual Savings (₱)**| —              | ₱420,000          | Cost Avoidance     | Projected savings from 16.8% fewer walkouts, capturing retained revenue and increased throughput |
+| Indicator                      | Baseline       | Post-Intervention             | % Change           | Impact Summary                                                                                   |
+|-------------------------------|----------------|------------------------------|--------------------|------------------------------------------------------------------------------------------------|
+| **Average Wait Time (minutes)**| 169.06         | 127.92                       | ↓ 24.3%            | Approximately 41-minute reduction per patient following triage restructuring and digitization  |
+| **% Patients Waiting >150 mins**| 75.2%          | 14.8%                        | ↓ 80.3%            | Significant drop in excessive wait times identified as defects in both datasets                 |
+| **Walkout Rate**               | 35.2%          | 18.4%                        | ↓ 47.7%            | Verified via Chi-square test; reflects improved patient retention and satisfaction               |
+| **Sigma Level**                | 1.85 σ         | 2.55 σ                       | ↑ Enhanced Capability | Calculated using NORMSINV(1 - defect rate) + 1.5; defect rate dropped from ~31% to 14.8%       |
+| **Estimated Annual Savings**   | —              | ₱420,000 (~$7,500 USD)       | Cost Avoidance     | Projected savings from 16.8% fewer walkouts, capturing retained revenue and increased throughput |
 
 ---
 
