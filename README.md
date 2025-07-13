@@ -1,8 +1,8 @@
 # 🏥 Machine-Learning-ER-Healthcare
 
-Using machine learning and SHAP to predict ER wait times and walkouts in healthcare settings
+Using **machine learning**—specifically **Random Forest models** with **SHAP (SHapley Additive exPlanations)**—to predict ER wait times and walkouts in healthcare settings.
 
-This project is part of a **Lean Six Sigma (Black Belt-level) initiative** aimed at addressing the persistent issue of long ER wait times and patient walkouts. By integrating the **DMAIC framework**, **Machine Learning**, and **Explainable AI (SHAP)**, the project provides data-driven insights for process improvement.
+This project is part of a **Lean Six Sigma (Black Belt-level) initiative** aimed at addressing the persistent issue of long ER wait times and patient walkouts. By integrating the **DMAIC framework**, **Random Forest Machine Learning models**, and **Explainable AI techniques like SHAP**, the project provides data-driven insights for process improvement.
 
 A **realistic synthetic dataset** was generated using **ChatGPT with logic-based simulation**, representing 250 emergency room cases. It enables modeling and analysis while respecting data privacy.
 
@@ -17,25 +17,28 @@ A **realistic synthetic dataset** was generated using **ChatGPT with logic-based
 
 ## 📁 Files Included
 
-- `er_ml_analysis.ipynb` – Jupyter Notebook with machine learning, SHAP, and visualizations  
+- `er_ml_analysis.ipynb` – Jupyter Notebook with **Random Forest**, SHAP, and visualizations  
 - `er_data.csv` – AI-simulated ER dataset (250 records)
 
 ---
 
 ## 🎯 Project Goals
 
-- Predict **ER Wait Time** (continuous) using Random Forest Regression  
-- Predict **Patient Walkout** (binary) using Random Forest Classification  
-- Interpret feature importance using **SHAP values**  
+- Predict **ER Wait Time** (continuous) using **Random Forest Regression**  
+- Predict **Patient Walkout** (binary) using **Random Forest Classification**  
+- Interpret feature importance using **SHAP (SHapley Additive Explanations)**  
 - Recommend improvement strategies based on model insights
+
+> 🔬 SHAP, developed by **Scott Lundberg and Su-In Lee at the University of Washington**, provides a unified, model-agnostic approach to explain the output of machine learning models by quantifying each feature’s contribution to the prediction. SHAP has also been featured in MIT open courseware and AI curricula due to its widespread impact.
 
 ---
 
 ## 🧠 Techniques Used
 
-- 📊 Descriptive Statistics & Visualization (Seaborn, Matplotlib)  
-- 📈 ML Models: Random Forest Regression & Classification (Scikit-learn)  
-- 🧠 Model Explainability using SHAP (Summary & Interaction plots)  
+- 📊 Statistical Analysis: **Jamovi**  
+- 📈 ML Models: **Random Forest Regression** & **Random Forest Classification** (Scikit-learn)  
+- 🧠 Model Explainability: **SHAP** (Summary and Interaction plots)  
+- 📉 Visualization Tools: **Seaborn**, **Matplotlib**, **Tableau Public**  
 - 🛠 Lean Six Sigma Tools: SIPOC, Control Charts, FMEA, Pareto, 5 Whys
 
 ---
@@ -46,7 +49,7 @@ A **realistic synthetic dataset** was generated using **ChatGPT with logic-based
 |-----------|-------------|
 | **Define**   | Identified ER wait time and patient walkouts as CTQ problems |
 | **Measure**  | Analyzed simulated data across 250 cases |
-| **Analyze**  | Used ML + SHAP to identify predictors and root causes |
+| **Analyze**  | Used **Random Forest + SHAP** to identify predictors and root causes |
 | **Improve**  | Proposed actions: triage optimization, shift-based staffing |
 | **Control**  | Metrics tracked via visual charts and modeling feedback |
 
@@ -76,48 +79,48 @@ A **realistic synthetic dataset** was generated using **ChatGPT with logic-based
 
 ## 🔧 Improvements Proposed
 
-All proposed improvements are **low-cost**, **realistic**, and **scalable**, supported by data insights and affordable technologies:
+All proposed improvements are **low-cost**, **realistic**, and **scalable**, supported by data insights and accessible technologies:
 
 - Implement **triage optimization protocols** to prioritize high-severity patients  
 - **Adjust staffing schedules** based on shift-level wait time patterns  
 - Use **digital queue boards or SMS notifications** to reduce walkouts  
 - Analyze and monitor process metrics using:
-  - 🟢 **Jamovi** for statistics (open source)  
+  - 🟢 **Jamovi** for statistical testing and effect sizes  
   - 🐍 **Python + Anaconda + VS Code** for modeling and automation  
   - 📊 **Tableau Public** and **Excel** for dashboards and control charts  
 - Train frontline teams with **data-driven decision support tools**  
-- Develop a simple **real-time prediction dashboard** using existing infrastructure
+- Develop a lightweight **real-time prediction dashboard** with existing infrastructure
 
 ---
 
 ## 📷 Visuals and Plots
 
-The project leverages multiple visualizations to interpret model results and track ER process improvements:
+This project utilizes multiple visualizations to interpret model results and track ER process improvements:
 
 - **SHAP Summary Plot**  
-  Highlights the contribution of each input feature (e.g., Triage Level, Shift) to the model’s prediction of ER wait times, showing which factors most strongly influence outcomes.
+  Shows the contribution of each feature (e.g., Triage Level, Shift) to predictions of ER wait times made by **Random Forest**.
 
 - **Actual vs. Predicted Wait Time Scatter Plot**  
-  Compares predicted wait times against actual values, where points aligning near the diagonal demonstrate high model accuracy.
+  Measures **Random Forest** performance—well-aligned points indicate accurate predictions.
 
 - **Control Chart**  
-  Visualizes ER wait time trends over periods or shifts with upper and lower control limits, enabling monitoring of process stability and effectiveness of interventions.
+  Monitors ER wait times across shifts using statistical control limits.
 
 - **Pareto Chart**  
-  Identifies and ranks the most frequent causes of long wait times or patient walkouts, helping prioritize improvement efforts on critical factors.
+  Ranks top causes of delays or walkouts to focus interventions.
 
 - **SHAP Interaction Plot**  
-  Explores interactions between pairs of features (such as Shift and Wait Time) to reveal complex influences on prediction results.
+  Explores how variables like Shift and Triage Level interact in **Random Forest predictions**.
 
-All these plots are generated using open-source Python libraries like Matplotlib, Seaborn, and SHAP within the Jupyter Notebook. Exported images can be used for reporting, presentations, or embedding in dashboards to facilitate data-driven decision-making.
+All plots are created using **open-source Python libraries** and rendered inside the Jupyter Notebook. Visual outputs can be exported for use in dashboards, reports, or presentations.
 
 ---
 
 ## 📌 Use Cases
 
 - ER operations and staffing optimization  
-- Healthcare analytics and improvement planning  
-- Academic case studies in ML and Lean Six Sigma  
+- Healthcare analytics and continuous improvement planning  
+- Academic case studies for teaching ML and Lean Six Sigma  
 
 ---
 
